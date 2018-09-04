@@ -1,0 +1,45 @@
+<section class="footer">
+  <div class='row'>
+    <div class='col-md-4 darker'>
+    <div class='col-md-12 padding white'>
+    <h4>General Information</h4>
+    <hr>
+    <h5>Address Line 1</h5>
+    <h5>Address Line 2</h5>
+    <h5>Address Line 3</h5>
+    <hr>
+    <p class="small-font grey">&copy;anandverma.iiita@gmail.com All right Reserved</p>
+   </div>
+  </div>
+    <div class='col-md-4'>
+      <div class='col-md-12'>
+      <h4>Subscribe</h4>
+      <hr>
+      <%= form_for :subscriber,url:subscribers_path do |f| %>
+      <%= f.text_field :f_name,placeholder:"First Name",class: "form-control mr-sm-2 sm_style" %>
+      <%= f.text_field :l_name,placeholder:"Last Name",class: "form-control mr-sm-2 sm_style" %>
+      <%= f.email_field :email,placeholder:"your Email ID",class:"form-control mr-sm-2 sm_style" %>
+      <div class="form-control">
+      <%= f.select :country,options_for_select(['country1','country2','country3']),prompt:'Select your Country' %>
+      </div>
+      <%= f.submit 'Submit',class:"btn btn-light my-2 my-sm-0 sm_style" %>
+      <% end %>
+<!--      <form class='form-inline mt-2 mt-md-0'>
+        <input class="form-control mr-sm-2"
+        type="text"
+        placeholder="Input Your Email ID" aria-label="Email" style="margin-bottom:10px; width: 100%;"><br>
+        <button class="btn btn-light my-2 my-sm-0" type="submit">Submit</button>
+      </form>
+-->     </div>
+    </div>
+
+    <div class='col-md-4 dark'>
+      <div class='col-md-12 white'>
+      <h4>Social site Link</h4>
+      <hr>
+      <h4><%= link_to 'Facebook',welcome_index_path,class:'linktxt' %></h4>
+      <h4>Linkedin</h4>
+     </div>
+    </div>
+  </div>
+</section>

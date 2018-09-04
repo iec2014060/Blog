@@ -1,0 +1,62 @@
+<div class='row' style='padding-top:5%;'>
+<div class='col'></div>
+<div class='col-md-7 '>
+
+
+<p><strong>Title:</strong>
+<%= @article.title %>
+</p>
+<p>
+  <strong>Text:
+  </strong>
+<%= @article.text %>
+</p>
+
+<hr>
+<h2>Comments</h2>
+<% @article.bomments.each do |comment| %>
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.Commenter %>
+</p>
+
+
+
+<p>
+  <strong>Comment</strong>
+  <%= comment.body %>
+</p>
+<p>
+<%= link_to 'Delete Comment',[comment.article,comment],method: :DELETE ,data:{confirm: 'Are you sure?'}  ,class:'btn btn-sm btn-danger' %>
+</p>
+<% end %>
+
+
+
+
+
+
+<hr>
+<h2>Add Comment<h2>
+  <%= form_for([@article,@article.bomments.build]) do |f| %>
+  <div class='field' style="100">
+    <p>
+    <%= f.label :commenter %> <br>
+    <%= f.text_field :Commenter,class: 'form-control' %>
+    </p>
+    <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body,class: 'form-control' %>
+    </p>
+    <p>
+      <%= f.submit class:'btn btn-lg btn-success'%>
+    </p>
+  </div>
+    <% end %>
+
+<p><%= link_to 'Back',articles_path,class:'btn btn-md btn-info' %>
+ <%= link_to 'Home',welcome_index_path ,class:'btn btn-md btn-primary'%>
+  </p>
+</div>
+  <div class='col'></div>
+  </div>

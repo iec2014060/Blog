@@ -1,0 +1,49 @@
+
+<div class='row' style='padding-top:15%;'>
+<div class='col'></div>
+<div class='col-md-10 '>
+
+
+
+
+
+<h1>List of all Subscriber</h1>
+
+<table class='table table-hover table-striped table-responsive-xs table-danger'>
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+    <th>Country</th>
+    <th>Delete</th>
+
+  </tr>
+</thead>
+  <% @subscribers.each do |subscriber| %>
+  <tr>
+    <td>
+      <%= subscriber.f_name %>
+    </td>
+    <td>
+      <%= subscriber.l_name %>
+    </td>
+    <td>
+      <%= subscriber.email %>
+    </td>
+    <td>
+      <%= subscriber.country %>
+    </td>
+
+    <td>
+      <%= link_to 'Delete',subscriber_path(subscriber),method: :DELETE ,data:{confirm: 'Are you sure to delete?'},class:'btn btn-sm btn-danger' %>
+    </td>
+
+  </tr>
+  <% end %>
+</table>
+<p><%= link_to 'Home',welcome_index_path ,class:'btn btn-lg btn-info'%>
+</p>
+</div>
+<div class='col'></div>
+</div>

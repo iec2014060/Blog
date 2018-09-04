@@ -11,3 +11,35 @@
  *= require_self
  *= require_tree .
  */
+@import "bootstrap";
+@import "footer";
+.white
+{
+  color: #ffffff
+}
+thead
+{
+  background-color: #553344;
+  color:#ffffff;
+}
+.form-control
+{
+  background-color: #efeeef;
+  border:3px solid #f3b1c8
+}
+
+.linktxt
+{
+  color:#deddee
+}
+.linktxt:hover
+{
+  color:#ffffff
+}
+.sm_style
+{
+  font-size:12px;
+  margin-bottom:3px;
+}
+.container
+{padding-top:20px;}

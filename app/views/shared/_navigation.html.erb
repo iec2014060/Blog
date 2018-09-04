@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">BarbieTechFabulous</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Home",welcome_index_path,class: 'nav-link' %>
+      </li>
+      <li class='nav-item'>
+        <%= link_to 'Blog',article_path,class:"nav-link" %>
+      </li>
+      <li class='nav-item'>
+        <a class='nav-link' href="#">About</a>
+
+      </li>
+      <li class='nav-item'>
+        <%= link_to 'Create Account',new_user_path,class:'nav-link' %>
+      </li>
+    </ul>
+  </div>
+</nav>

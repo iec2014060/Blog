@@ -21,9 +21,13 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'paperclip'
+ gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'paperclip-av-transcoder'
+ gem 'aws-sdk-s3', '~> 1.17', '>= 1.17.1'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
